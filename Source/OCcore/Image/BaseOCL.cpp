@@ -23,7 +23,7 @@ int BaseOCL::SetupOCL()
 {
 	InitBase();
 
-	_context = cl::Context({ _defaultDevice });
+	_context = cl::Context(_defaultDevice );
 	_queue = cl::CommandQueue(_context, _defaultDevice);
 
 	return 0;
